@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="me.yeojoy.registerpasswordchecker.MainActivity">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edit_text_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/checkbox_show_password"
+                android:hint="input password."
+                android:inputType="textPassword"
+                android:maxLines="1" />
+
+            <CheckBox
+                android:id="@id/checkbox_show_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:button="@drawable/selector_show_password" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_check_list"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/check_list_view_height"
+            android:layout_below="@id/relative_layout_password"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/text_view_least_char_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="최소 8자" />
+
+            <TextView
+                android:id="@+id/text_view_capital_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="대문자 1개" />
+
+            <TextView
+                android:id="@+id/text_view_lower_case_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="소문자 1개" />
+
+            <TextView
+                android:id="@+id/text_view_number_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="숫자 1개" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edit_text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear_layout_check_list"
+            android:hint="name."
+            android:inputType="textPassword"
+            android:maxLines="1" />
+    </RelativeLayout>
+</layout>
